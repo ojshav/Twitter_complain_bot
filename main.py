@@ -7,10 +7,10 @@ import time
 
 PROMISED_DOWN = 150
 PROMISED_UP = 10
-CHROME_DRIVER_PATH = r" D:\chromedriver_win32\chromedriver.exe "
-TWITTER_EMAIL = "ojshavsaxenaa@gmail.com"
-TWITTER_PASSWORD = "9993486608"
-MY_OPERATOR = "@Airtl"
+CHROME_DRIVER_PATH = your chromedriver path
+TWITTER_EMAIL = your twitter email
+TWITTER_PASSWORD = your twitter password
+MY_OPERATOR = your operator name
 
 
 class InternetSpeedTwitterBot:
@@ -60,35 +60,6 @@ class InternetSpeedTwitterBot:
         self.driver1.quit()
 
 
-#     def tweet_at_provider(self):
-#         self.driver.get("https://twitter.com/login")
-#
-#         time.sleep(2)
-#         email = self.driver.find_element(By.XPATH,
-#                                          '//input[@autocomplete="username"]')
-#         password = self.driver.find_element(By.NAME,'password')
-#
-#         email.send_keys(TWITTER_EMAIL)
-#         password.send_keys(TWITTER_PASSWORD)
-#         time.sleep(2)
-#         password.send_keys(Keys.ENTER)
-#
-#         time.sleep(5)
-#         tweet_compose = self.driver.find_element(By.XPATH,
-#                                                  '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div[1]/div/div/div/div[2]/div/div/div/div')
-#
-#         tweet = f"Hey Internet Provider, why is my internet speed {self.down}down/{self.up}up when I pay for {PROMISED_DOWN}down/{PROMISED_UP}up?"
-#         tweet_compose.send_keys(tweet)
-#         time.sleep(3)
-#
-#         tweet_button = self.driver.find_element(By.XPATH,
-#                                                 '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[4]/div/div/div[2]/div[3]')
-#         tweet_button.click()
-#
-#         time.sleep(2)
-#         self.driver.quit()
-#
-#
 bot = InternetSpeedTwitterBot(CHROME_DRIVER_PATH)
 bot.get_internet_speed()
 bot.tweet_at_provider()
